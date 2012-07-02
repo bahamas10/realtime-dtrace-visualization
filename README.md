@@ -3,12 +3,23 @@ Realtime DTrace Analysis
 
 A collection of scripts used for realtime DTrace visualizations and analysis
 
+Stream gnuplot
+--------------
+
+`stream-gnuplot.sh` is a script that reads from stdin to generate live gnuplot
+graphs.  It takes input in the form of:
+
+    <epoch> <y-axis>\n
+
+The DTrace scripts provided will output in this format, so they can be piped into
+`stream-gnuplot.sh`.
+
 Examples
 --------
 
-### Syscall Latency Visualization
+### Syscall Latency/Count Visualization
 
-Visualize syscall latency using gnuplot.  An example of this can be seen here
+Visualize syscall latency or counts using gnuplot.  An example of this can be seen here
 http://www.youtube.com/watch?v=PnvszdcUgJc
 
     $ sudo ./syscall-latency.d 'read*' | ./stream-gnulpot.sh
