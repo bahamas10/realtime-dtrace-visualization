@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Stream datapoints into gnuplot
 
 len=${1:-10}
 

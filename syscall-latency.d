@@ -1,4 +1,8 @@
 #!/usr/sbin/dtrace -s
+/**
+ * Provide a syscall as the first argument
+ * to trace system-wide latency of the call
+ */
 
 # pragma D option quiet
 
