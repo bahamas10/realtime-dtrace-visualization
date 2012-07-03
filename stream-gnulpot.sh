@@ -37,5 +37,5 @@ while read x y; do
 
 	{ echo "$gnuplot_header"; get_last_plots; } | gnuplot
 
-		i=$(( (i + 1) % len))
-	done
+	i=$(( (i + 1) % len))
+done
